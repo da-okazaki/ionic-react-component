@@ -1,0 +1,15 @@
+{
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-ionic-react-master-10908-authRole",
+            "UnauthRoleArn": "arn:aws:iam::145643623466:role/amplify-ionic-react-master-10908-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::145643623466:role/amplify-ionic-react-master-10908-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "amplify-ionic-react-master-10908-deployment",
+            "UnauthRoleName": "amplify-ionic-react-master-10908-unauthRole",
+            "StackName": "amplify-ionic-react-master-10908",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:145643623466:stack/amplify-ionic-react-master-10908/93ae7830-9c46-11ea-9807-0e0e3248afe0",
+            "AmplifyAppId": "djrht7llg4jti"
+        }
+    }
+}

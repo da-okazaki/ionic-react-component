@@ -3,7 +3,13 @@ import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
+import Card from './pages/Card/Card';
 import ViewMessage from './pages/ViewMessage';
+import Modal from './pages/Modal/Modal'
+import Camera from './pages/Picture/Camera'
+import PicturePreview from './pages/PicturePreview/PicturePreview'
+import WebCamera from './pages/WebCamera/WebCamera'
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -30,6 +36,11 @@ const App: React.FC = () => (
       <IonRouterOutlet>
         <Route path="/home" component={Home} exact={true} />
         <Route path="/message/:id" component={ViewMessage} exact={true} />
+        <Route path="/card" component={Card} exact={true} />
+        <Route path="/modal" component={Modal} exact={true} />
+        <Route path="/camera" component={Camera} exact={true} />
+        <Route path="/picturepreview" component={PicturePreview} exact={true} />
+        <Route path="/webcamera" component={WebCamera} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/home" />} />
       </IonRouterOutlet>
     </IonReactRouter>

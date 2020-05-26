@@ -1,0 +1,98 @@
+.modal-jancode {
+    background-color: gray;
+}
+
+/* Music Card */
+
+.music-card {
+    text-align: center;
+
+    h2 {
+      font-weight: 600;
+      font-size: 24px;
+      text-align: center;
+      color: black;
+  
+    }
+    p {
+      font-weight: 400;
+      font-size: 18px;  
+      color: black;
+  
+    }
+    ion-progress-bar {
+      margin: 30px 0 20px;
+    }
+    
+    ion-img {
+        border-radius: 14px;
+    }
+}
+
+/* Action Card */
+.action-card {
+
+    ion-grid {
+        --ion-grid-column-padding: 0;      
+        padding: 10px 0 0;
+    }
+
+    ion-col:last-child {
+        text-align: right;
+    }
+
+    .button-clear {
+        --background-hover: currentColor;
+        --background-focused: currentColor;
+    }
+
+    .button-clear {
+        --color: #c6cede;
+        --border-radius: 50%;
+        --padding-top: 0;
+        --padding-end: 0;
+        --padding-bottom: 0;
+        --padding-start: 0;
+      
+        margin: 0;
+      
+        height: 36px;
+        width: 36px;
+    }
+}
+
+/* Apps Card */
+
+.apps-card {
+    ion-list ion-thumbnail {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      
+        --border-radius: 14px;
+    }
+
+}
+
+/* Coworker Card */
+
+.coworker-card {
+    .header-img {
+        width: 100%;        
+    }
+    h1 {
+        font-weight: 600;
+        font-size: 18px;
+    }
+    p {
+        color: #5b708b;
+    }
+
+    ion-icon {
+        align-self: start;
+        margin-top: 10px;
+        margin-right: 29px;
+        color: #b2becd;
+    }
+}
+
+/* Madison */
