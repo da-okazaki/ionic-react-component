@@ -125,6 +125,7 @@ class Card extends React.Component<RouteComponentProps> {
             </IonCard>
 
             {/* Coworker Card */}
+            
             <IonCard class="coworker-card">
               <IonImg className="header-img" src={CardCoworkerHeader} />
               
