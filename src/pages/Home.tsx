@@ -18,18 +18,8 @@ import iconActionSheeet from '../asset/feature-component-actionsheet-icon.png'
 import iconAlert from '../asset/component-alert-icon.png'
 import iconBadge from '../asset/component-badge-icon.png'
 
-//class Home extends React.Component<RouteComponentProps> {
+
 const Home: React.FC<RouteComponentProps> = () => {
-
-  /*
-  constructor (props: any) {
-    super(props)
-  }
-  */
-
-  const handleToCardPage = () => {
-    //props.history.push('/card')
-  }      
 
   return (
       <IonPage>
@@ -52,43 +42,43 @@ const Home: React.FC<RouteComponentProps> = () => {
             <IonLabel>UI Component</IonLabel>
           </IonListHeader>
           <IonList className="ion-avatar-color">
-            <IonItem>
+            <IonItem routerLink="/actionsheet">
               <IonAvatar slot="start">
                   <IonImg src={logoIonic}/>
               </IonAvatar>
               <IonLabel>Action Sheet</IonLabel>
             </IonItem>
-            <IonItem>
+            <IonItem　routerLink="/alert">
               <IonAvatar slot="start">
                   <IonImg src={logoIonic}/>
               </IonAvatar>
               <IonLabel>Alert</IonLabel>
             </IonItem>
-            <IonItem>
+            <IonItem routerLink="/avatar">
               <IonAvatar slot="start">
                   <IonImg src={logoIonic}/>
               </IonAvatar>
               <IonLabel>Avatar</IonLabel>
             </IonItem>
-            <IonItem>
+            <IonItem routerLink="/badge">
               <IonAvatar slot="start">
                   <IonImg src={logoIonic}/>
               </IonAvatar>
               <IonLabel>Badge</IonLabel>
             </IonItem>
-            <IonItem>
+            <IonItem routerLink="/button">
               <IonAvatar slot="start">
                   <IonImg src={logoIonic}/>
               </IonAvatar>                                
               <IonLabel>Button</IonLabel>
             </IonItem>
-            <IonItem>
+            <IonItem routerLink="/card">
               <IonAvatar slot="start">
                   <IonImg src={logoIonic}/>
               </IonAvatar>
-              <IonLabel onClick={() => {}}>Card</IonLabel>
+              <IonLabel>Card</IonLabel>
             </IonItem>
-            <IonItem>
+            <IonItem routerLink="/modal">
               <IonAvatar slot="start">
                   <IonImg src={logoIonic}/>
               </IonAvatar>
@@ -154,7 +144,7 @@ const Home: React.FC<RouteComponentProps> = () => {
               </IonAvatar>
               <IonLabel onClick={() => {}}>PayPal</IonLabel>
             </IonItem>
-            <IonItem>
+            <IonItem routerLink="/stripe">
               <IonAvatar slot="start">
                   <IonImg src={logoIonic}/>
               </IonAvatar>

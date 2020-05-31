@@ -3,12 +3,18 @@ import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
-import Card from './pages/Card/Card';
 import ViewMessage from './pages/ViewMessage';
+import ActionSheet from './pages/ActionSheet/ActionSheet'
+import Alert from './pages/Alert/Alert'
+import Avatar from './pages/Avatar/Avatar'
+import Badge from './pages/Badge/Badge'
+import Button from './pages/Button/Button'
+import Card from './pages/Card/Card';
 import Modal from './pages/Modal/Modal'
 import Camera from './pages/Picture/Camera'
 import PicturePreview from './pages/PicturePreview/PicturePreview'
 import WebCamera from './pages/WebCamera/WebCamera'
+import Stripe from './pages/Stripe/Stripe'
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -36,11 +42,18 @@ const App: React.FC = () => (
       <IonRouterOutlet>
         <Route path="/home" component={Home} exact={true} />
         <Route path="/message/:id" component={ViewMessage} exact={true} />
+        <Route path="/actionsheet" component={ActionSheet} exact={true} />
+        <Route path="/alert" component={Alert} exact={true} />
+        <Route path="/avatar" component={Avatar} exact={true} />
+        <Route path="/badge" component={Badge} exact={true} />
+        <Route path="/button" component={Button} exact={true} />
         <Route path="/card" component={Card} exact={true} />
         <Route path="/modal" component={Modal} exact={true} />
         <Route path="/camera" component={Camera} exact={true} />
         <Route path="/picturepreview" component={PicturePreview} exact={true} />
         <Route path="/webcamera" component={WebCamera} exact={true} />
+        <Route path="/stripe" component={Stripe} exact={true} />
+        
         <Route exact path="/" render={() => <Redirect to="/home" />} />
       </IonRouterOutlet>
     </IonReactRouter>
