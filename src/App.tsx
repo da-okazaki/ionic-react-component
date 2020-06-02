@@ -2,14 +2,16 @@ import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
-import ViewMessage from './pages/ViewMessage';
+import Home from './pages/Home/Home';
+import ViewMessage from './pages/ViewMessage/ViewMessage';
 import ActionSheet from './pages/ActionSheet/ActionSheet'
 import Alert from './pages/Alert/Alert'
 import Avatar from './pages/Avatar/Avatar'
 import Badge from './pages/Badge/Badge'
 import Button from './pages/Button/Button'
 import Card from './pages/Card/Card';
+import Slides from './pages/Slides/Slides'
+
 import Modal from './pages/Modal/Modal'
 import Camera from './pages/Picture/Camera'
 import PicturePreview from './pages/PicturePreview/PicturePreview'
@@ -48,6 +50,7 @@ const App: React.FC = () => (
         <Route path="/badge" component={Badge} exact={true} />
         <Route path="/button" component={Button} exact={true} />
         <Route path="/card" component={Card} exact={true} />
+        <Route path="/slides" component={Slides} exact={true} />
         <Route path="/modal" component={Modal} exact={true} />
         <Route path="/camera" component={Camera} exact={true} />
         <Route path="/picturepreview" component={PicturePreview} exact={true} />
