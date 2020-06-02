@@ -1,23 +1,16 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { 
-    IonApp, IonRouterOutlet, IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
-    IonList, IonListHeader, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox,
-    IonItemSliding, IonItemOptions, IonItemOption, IonAvatar, IonImg, IonButtons, IonBackButton,
-    IonGrid, IonRow, IonCol, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle, IonButton
+    IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
+    IonList, IonListHeader, IonItem, IonLabel, IonAvatar, IonImg,
 } from '@ionic/react';
+import {
+  logoIonic
+} from 'ionicons/icons';
+
 import './Home.scss';
-
-import { logoIonic, } from 'ionicons/icons';
 import { RouteComponentProps } from 'react-router-dom';
-
 import { IonReactRouter } from '@ionic/react-router';
-
-/* asset */
-import iconActionSheeet from '../asset/feature-component-actionsheet-icon.png'
-import iconAlert from '../asset/component-alert-icon.png'
-import iconBadge from '../asset/component-badge-icon.png'
-
 
 const Home: React.FC<RouteComponentProps> = () => {
 
@@ -78,11 +71,23 @@ const Home: React.FC<RouteComponentProps> = () => {
               </IonAvatar>
               <IonLabel>Card</IonLabel>
             </IonItem>
+            <IonItem routerLink="/horizontal-card">
+              <IonAvatar slot="start">
+                  <IonImg src={logoIonic}/>
+              </IonAvatar>
+              <IonLabel>Horizontal Card</IonLabel>
+            </IonItem>
             <IonItem routerLink="/modal">
               <IonAvatar slot="start">
                   <IonImg src={logoIonic}/>
               </IonAvatar>
-              <IonLabel onClick={() => {}}>Modal</IonLabel>
+              <IonLabel>Modal</IonLabel>
+            </IonItem>
+            <IonItem routerLink="/slides">
+              <IonAvatar slot="start">
+                  <IonImg src={logoIonic}/>
+              </IonAvatar>
+              <IonLabel>Slides</IonLabel>
             </IonItem>
           </IonList>
 
@@ -90,7 +95,7 @@ const Home: React.FC<RouteComponentProps> = () => {
             <IonLabel>Native Component</IonLabel>
           </IonListHeader>
           <IonList className="ion-avatar-color">
-            <IonItem>
+            <IonItem routerLink="/camera">
               <IonAvatar slot="start">
                   <IonImg src={logoIonic}/>
               </IonAvatar>
@@ -102,7 +107,7 @@ const Home: React.FC<RouteComponentProps> = () => {
               </IonAvatar>
               <IonLabel onClick={() => {}}>Camera Preview</IonLabel>
             </IonItem>
-            <IonItem>
+            <IonItem routerLink="/webcamera">
               <IonAvatar slot="start">
                   <IonImg src={logoIonic}/>
               </IonAvatar>
