@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-    IonPage, IonContent, IonSlides, IonSlide, IonButton, IonIcon
+    IonPage, IonContent, IonSlides, IonSlide, IonButton, IonIcon, IonLabel
 } from '@ionic/react';
 import { 
   arrowForward
@@ -23,7 +23,7 @@ const Slides: React.FC<RouteComponentProps> = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <IonSlides pager={true} options={slideOpts}>
+        <IonSlides pager={true} options={slideOpts}>        
           <IonSlide>
             <div className="slide">
               <img src={Slide1} alt="slide1"/>
@@ -46,7 +46,7 @@ const Slides: React.FC<RouteComponentProps> = () => {
             <h2>Ready to Play?</h2>
             <IonButton fill="clear" routerLink="/home">Continue<IonIcon slot="end" name={arrowForward}></IonIcon></IonButton>
           </IonSlide>
-        </IonSlides>                    
+        </IonSlides>        
       </IonContent>
     </IonPage>
     )

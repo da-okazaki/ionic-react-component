@@ -10,6 +10,7 @@ import Avatar from './pages/Avatar/Avatar'
 import Badge from './pages/Badge/Badge'
 import Button from './pages/Button/Button'
 import Card from './pages/Card/Card';
+import CardSlides from './pages/CardSlides/CardSlides';
 import Slides from './pages/Slides/Slides'
 import Modal from './pages/Modal/Modal'
 import Camera from './pages/Picture/Camera'
@@ -48,6 +49,7 @@ const App: React.FC = () => (
         <Route path="/badge" component={Badge} exact={true} />
         <Route path="/button" component={Button} exact={true} />
         <Route path="/card" component={Card} exact={true} />
+        <Route path="/card-slides" component={CardSlides} exact={true} />
         <Route path="/slides" component={Slides} exact={true} />
         <Route path="/modal" component={Modal} exact={true} />
         <Route path="/camera" component={Camera} exact={true} />

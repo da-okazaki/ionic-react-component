@@ -69,11 +69,11 @@ const Home: React.FC<RouteComponentProps> = () => {
               </IonAvatar>
               <IonLabel>Card</IonLabel>
             </IonItem>
-            <IonItem routerLink="/horizontal-card">
+            <IonItem routerLink="/card-slides">
               <IonAvatar slot="start">
                   <IonImg src={logoIonic}/>
               </IonAvatar>
-              <IonLabel>Horizontal Card</IonLabel>
+              <IonLabel>Card Slides</IonLabel>
             </IonItem>
             <IonItem routerLink="/modal">
               <IonAvatar slot="start">
