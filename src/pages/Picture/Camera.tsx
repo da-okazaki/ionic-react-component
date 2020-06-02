@@ -1,33 +1,28 @@
 // ---------------------------------------
 // ionic Component
 // ---------------------------------------
-import React, { useState, useRef } from 'react';
-
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonImg, IonFab, IonFabButton, IonIcon, IonButtons, IonButton, IonBackButton, IonLoading, IonProgressBar,IonModal, } from '@ionic/react';
-import { camera, add, imageOutline } from 'ionicons/icons';
-
-import { Plugins, CameraResultType, ActionSheetOptionStyle } from '@capacitor/core';
+import React from 'react';
+import { RouteComponentProps } from 'react-router-dom';
+import {
+  IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFab, IonFabButton, IonIcon, IonButtons, IonButton,IonBackButton,
+} from '@ionic/react';
+import {
+  camera, imageOutline
+} from 'ionicons/icons';
+import './Camera.scss'
+import { Plugins, CameraResultType } from '@capacitor/core';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
 import { modalController } from '@ionic/core';
-
-import { RouteComponentProps } from 'react-router-dom';
-import './Camera.scss'
 
 // ---------------------------------------
 // Package
 // ---------------------------------------
-import { encode } from 'punycode';
 import axios from 'axios';
-
-// ---------------------------------------
-// Environment Variables
-// ---------------------------------------
-const { REACT_APP_HTTP_ENDPOINT } = process.env
 
 // ---------------------------------------
 // Camera
 // ---------------------------------------
-const { Camera, Modals } = Plugins;
+const { Camera } = Plugins;
 
 const INITIAL_STATE = {
   photo: '',
@@ -58,8 +53,7 @@ class Picture extends React.Component<RouteComponentProps> {
 
   handleToModalPage = () => {
     this.props.history.push('/modal')
-  }  
-
+  }
 
   async takePicture() {
     const image = await Camera.getPhoto({
@@ -70,19 +64,10 @@ class Picture extends React.Component<RouteComponentProps> {
     var base64String = image.base64String;
     console.log("## base64String")
     console.log(base64String)
-
-    var fileName = "test.jpeg"
-    //var response = await sendPostRequest(base64String, fileName)
   }
 
   render() {
     
-    //const [showFilterModal, setShowFilterModal] = useState(false);
-    //const pageRef = useRef<HTMLElement>(null);
-
-    
-    const { photo } = this.state;
-
     return (
       <IonPage>
         <IonHeader>
@@ -91,28 +76,17 @@ class Picture extends React.Component<RouteComponentProps> {
             <IonButtons slot="start">
               <IonBackButton defaultHref="/home" />    
             </IonButtons>
-
             {/* light */}
             <IonButtons slot="end">
             <IonButton onClick={() => {}}>
                 <IonIcon slot="icon-only" icon={imageOutline} />
               </IonButton>
             </IonButtons>
-
             <IonTitle>Picture</IonTitle>
           </IonToolbar>
         </IonHeader>
         
         <IonContent className="ion-padding">
-
-        {/**
-        <IonModal isOpen={showModal}>
-          <p>This is modal content</p>
-          <IonButton onClick={() => setShowModal(false)}>Close Modal</IonButton>
-        </IonModal>
-        <IonButton onClick={() => setShowModal(true)}>Show Modal</IonButton>
-         */}
-
           <div className="ion-fab">
           <IonFab color="primary" vertical="bottom" horizontal="center" slot="fixed">
             <IonFabButton color="primary" onClick={() => this.takePicture()}>
@@ -126,58 +100,6 @@ class Picture extends React.Component<RouteComponentProps> {
     );
   }
 };
-
-/**
-const videoConstraints = {
-  width: 1280,
-  height: 720,
-  //facingMode
-  facingMode: 'user'
-  //facingMode: { exact: "environment" }
-};
-
-const Camera : React.FC<RouteComponentProps> = () => {
-
-  const webcamRef = React.useRef(null);
- 
-  const capture = React.useCallback(
-    () => {
-      console.log('getScreenshot()')
-      //const imageSrc = webcamRef.current.getScreenshot();
-      //const imageSrc = webcamRef.current.getScreenshot();
-
-    },
-    [webcamRef]
-  );
-
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonBackButton text="" icon={chevronBack} defaultHref="home"/>
-          </IonButtons>
-          <IonTitle>Ionic Camera</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-
-      <IonContent fullscreen>
-        <Webcam
-          audio={false}
-          height={720}
-          ref={webcamRef}
-          screenshotFormat="image/jpeg"
-          width={1280}
-          videoConstraints={videoConstraints}
-        />
-
-        <IonButton onClick={capture}>Capture photo</IonButton>
-        
-      </IonContent>
-    </IonPage>
-  )
-}
-*/
 
 export default Picture;
 

@@ -1,22 +1,16 @@
 import React from 'react';
+import { RouteComponentProps } from 'react-router-dom'
 import { 
-    IonPage, IonHeader, IonToolbar, IonTitle, IonContent,IonButtons, IonBackButton,
-    IonButton,IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonCardSubtitle,
-    IonLabel, IonImg
+    IonPage, IonHeader, IonToolbar, IonTitle, IonContent,IonButtons, IonBackButton, IonCard, IonCardHeader, IonCardContent,
+    IonCardTitle, IonCardSubtitle, IonLabel, IonImg
 } from '@ionic/react';
 import { 
   chevronBack
 } from 'ionicons/icons';
-
 import './Stripe.scss';
-import { Stripe } from '@ionic-native/stripe/ngx'
-
-import { RouteComponentProps } from 'react-router-dom'
-import { IonReactRouter } from '@ionic/react-router'
-
+//import { Stripe } from '@ionic-native/stripe/ngx'
 import StripeCheckoutButton from '../../components/stripe-button'
-
-import StripeImage from '../../asset/stripe.png'
+import StripeImage from '../../asset/stripe/stripe.png'
 
 const totalPrice = 58;
 
@@ -33,29 +27,23 @@ const StripeView: React.FC<RouteComponentProps> = () => {
           <IonTitle>Ionic Stripe</IonTitle>
         </IonToolbar>
       </IonHeader>
+      
       <IonContent fullscreen>
-
         <IonCard>
           <IonLabel>
             <IonImg src={StripeImage} />
           </IonLabel>
-
           <IonCardHeader>
             <IonCardSubtitle>GET STARTED</IonCardSubtitle>
             <IonCardTitle>Stripe Sample</IonCardTitle>
             <p>Pay Total of $ {totalPrice}</p>
           </IonCardHeader>
-
           <IonCardContent>
             <p>
               <StripeCheckoutButton price={totalPrice} />
             </p>
-
           </IonCardContent>
         </IonCard>
-
-        
-
       </IonContent>
     </IonPage>
   )

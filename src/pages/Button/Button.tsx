@@ -1,16 +1,12 @@
 import React from 'react';
+import { RouteComponentProps } from 'react-router-dom';
 import { 
     IonPage, IonHeader, IonToolbar, IonTitle, IonContent,IonButtons, IonBackButton,
 } from '@ionic/react';
 import { 
   chevronBack
 } from 'ionicons/icons';
-
 import './Button.scss';
-
-import { RouteComponentProps } from 'react-router-dom';
-import { IonReactRouter } from '@ionic/react-router';
-
 
 const Button: React.FC<RouteComponentProps> = () => {
   return (

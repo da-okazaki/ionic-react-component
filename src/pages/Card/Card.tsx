@@ -1,39 +1,33 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router-dom';
 import { 
-  IonApp, IonRouterOutlet, IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
-  IonList, IonListHeader, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox,
-  IonItemSliding, IonItemOptions, IonItemOption, IonAvatar, IonImg, IonCard, IonCardHeader, IonCardContent,
-  IonProgressBar, IonButton, IonIcon, IonButtons, IonBackButton, IonMenuButton, IonCardSubtitle, IonCardTitle,
-  IonGrid, IonCol, IonRow, IonThumbnail, IonInfiniteScroll, IonInfiniteScrollContent, IonVirtualScroll, 
+  IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel, IonAvatar, 
+  IonImg, IonCard, IonCardHeader, IonCardContent, IonProgressBar, IonButton, IonIcon, IonButtons, IonBackButton, 
+  IonCardSubtitle, IonCardTitle, IonGrid, IonCol, IonRow, IonThumbnail,
 } from '@ionic/react';
-import './Card.scss';
 import { 
   heart, heartSharp, chevronBack, playBack, playForward, caretForwardOutline, repeatOutline, heartOutline,
   share, shareSharp, call, mail, 
 } from 'ionicons/icons';
-import { RouteComponentProps } from 'react-router-dom';
-import { IonReactRouter } from '@ionic/react-router';
+import './Card.scss';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 
-import Album from '../../asset/card-album.png'
-import CardTopImg from '../../asset/card-top-img.png'
-import LogoAmtrak from '../../asset/logo-amtrak.png'
-import LogoShipt from '../../asset/logo-shipt.png'
-import LogoSworkit from '../../asset/logo-sworkit.png'
-import LogoUntappd from '../../asset/logo-untappd.png'
-
-import CardCoworkerHeader from '../../asset/card-coworker-header.png'
-import CardCoworkerAvatar from '../../asset/card-coworker-avatar.png'
-
-import Madison from '../../asset/madison.jpg'
+/* asset */
+import Album from               '../../asset/card/card-album.png'
+import CardTopImg from          '../../asset/card/card-top-img.png'
+import LogoAmtrak from          '../../asset/card/logo-amtrak.png'
+import LogoShipt from           '../../asset/card/logo-shipt.png'
+import LogoSworkit from         '../../asset/card/logo-sworkit.png'
+import LogoUntappd from         '../../asset/card/logo-untappd.png'
+import CardCoworkerHeader from  '../../asset/card/card-coworker-header.png'
+import CardCoworkerAvatar from  '../../asset/card/card-coworker-avatar.png'
+import Madison from             '../../asset/card/madison.jpg'
 
 class Card extends React.Component<RouteComponentProps> {
 
   constructor (props: any, private youtube: YoutubeVideoPlayer) {
     super(props)
   }
-
 
   render () {
 

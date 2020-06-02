@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router-dom';
+
 import { 
   IonPage, IonHeader, IonToolbar, IonTitle, IonContent,IonButton, IonIcon, IonButtons, IonBackButton, IonModal
 } from '@ionic/react';
@@ -7,8 +8,6 @@ import {
   chevronBack, closeOutline, 
 } from 'ionicons/icons';
 import './Modal.scss';
-import { RouteComponentProps } from 'react-router-dom';
-import { IonReactRouter } from '@ionic/react-router';
 
 const Modal : React.FC<RouteComponentProps> = () => {
 

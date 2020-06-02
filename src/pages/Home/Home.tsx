@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router-dom';
 import { 
     IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
     IonList, IonListHeader, IonItem, IonLabel, IonAvatar, IonImg,
@@ -7,10 +7,8 @@ import {
 import {
   logoIonic
 } from 'ionicons/icons';
-
 import './Home.scss';
-import { RouteComponentProps } from 'react-router-dom';
-import { IonReactRouter } from '@ionic/react-router';
+//import { IonReactRouter } from '@ionic/react-router';
 
 const Home: React.FC<RouteComponentProps> = () => {
 
@@ -100,12 +98,6 @@ const Home: React.FC<RouteComponentProps> = () => {
                   <IonImg src={logoIonic}/>
               </IonAvatar>
               <IonLabel onClick={() => {}}>Camera</IonLabel>
-            </IonItem>
-            <IonItem>
-              <IonAvatar slot="start">
-                  <IonImg src={logoIonic}/>
-              </IonAvatar>
-              <IonLabel onClick={() => {}}>Camera Preview</IonLabel>
             </IonItem>
             <IonItem routerLink="/webcamera">
               <IonAvatar slot="start">

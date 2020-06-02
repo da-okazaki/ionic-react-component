@@ -1,21 +1,15 @@
 import React, { Fragment, useState } from "react";
-import ReactDOM from "react-dom";
-import { 
-  IonApp, IonRouterOutlet, IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
-  IonList, IonListHeader, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox,
-  IonItemSliding, IonItemOptions, IonItemOption, IonAvatar, IonImg, IonCard, IonCardHeader, IonCardContent,
-  IonProgressBar, IonButton, IonIcon, IonButtons, IonBackButton, IonMenuButton, IonCardSubtitle, IonCardTitle,
-  IonGrid, IonCol, IonRow, IonThumbnail, IonInfiniteScroll, IonInfiniteScrollContent, 
+import {
+  IonPage, IonHeader, IonToolbar, IonTitle, IonButtons, IonBackButton,
 } from '@ionic/react';
 import { 
-  heart, heartSharp, chevronBack, playBack, playForward, caretForwardOutline, repeatOutline, heartOutline,
-  share, shareSharp, call, mail, 
+  chevronBack,
 } from 'ionicons/icons';
-
 import { Camera } from "../../camera/index";
 import { Root, Preview, Footer, GlobalStyle } from "./styles";
 
 const WebCamera = () => {
+  
   const [isCameraOpen, setIsCameraOpen] = useState(false);
   const [cardImage, setCardImage] = useState();
 
@@ -35,7 +29,7 @@ const WebCamera = () => {
         <Root>
           {isCameraOpen && (
             <Camera
-              onCapture={blob => setCardImage(blob)}
+              onCapture={(blob:any) => setCardImage(blob)}
               onClear={() => setCardImage(undefined)}
             />
           )}

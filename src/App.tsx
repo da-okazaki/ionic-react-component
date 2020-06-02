@@ -11,10 +11,8 @@ import Badge from './pages/Badge/Badge'
 import Button from './pages/Button/Button'
 import Card from './pages/Card/Card';
 import Slides from './pages/Slides/Slides'
-
 import Modal from './pages/Modal/Modal'
 import Camera from './pages/Picture/Camera'
-import PicturePreview from './pages/PicturePreview/PicturePreview'
 import WebCamera from './pages/WebCamera/WebCamera'
 import Stripe from './pages/Stripe/Stripe'
 
@@ -53,7 +51,6 @@ const App: React.FC = () => (
         <Route path="/slides" component={Slides} exact={true} />
         <Route path="/modal" component={Modal} exact={true} />
         <Route path="/camera" component={Camera} exact={true} />
-        <Route path="/picturepreview" component={PicturePreview} exact={true} />
         <Route path="/webcamera" component={WebCamera} exact={true} />
         <Route path="/stripe" component={Stripe} exact={true} />
         
