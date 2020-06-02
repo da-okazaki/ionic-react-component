@@ -5,7 +5,7 @@ import {
   IonList, IonListHeader, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox,
   IonItemSliding, IonItemOptions, IonItemOption, IonAvatar, IonImg, IonCard, IonCardHeader, IonCardContent,
   IonProgressBar, IonButton, IonIcon, IonButtons, IonBackButton, IonMenuButton, IonCardSubtitle, IonCardTitle,
-  IonGrid, IonCol, IonRow, IonThumbnail, IonInfiniteScroll, IonInfiniteScrollContent, 
+  IonGrid, IonCol, IonRow, IonThumbnail, IonInfiniteScroll, IonInfiniteScrollContent, IonVirtualScroll, 
 } from '@ionic/react';
 import './Card.scss';
 import { 
@@ -39,7 +39,6 @@ class Card extends React.Component<RouteComponentProps> {
 
     return (
         <IonPage>
-
           {/*-- Back button with no text and custom icon --*/}
           <IonHeader>
             <IonToolbar>
@@ -208,11 +207,15 @@ class Card extends React.Component<RouteComponentProps> {
 
             {/* Youtube */}
             <IonCard>
-              
-              <IonCardContent>
-                
+              <IonCardContent>    
               </IonCardContent>
-            </IonCard>                
+            </IonCard>
+
+            {/* Google Maps */}
+            <IonCard>
+              <IonCardContent>    
+              </IonCardContent>
+            </IonCard>            
 
           </IonContent>
         </IonPage>
