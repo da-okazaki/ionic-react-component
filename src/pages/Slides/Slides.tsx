@@ -15,6 +15,7 @@ import Slide3 from '../../asset/slides/slide-3.png'
 import Slide4 from '../../asset/slides/slide-4.png'
 
 const slideOpts = {
+  init: true,
   initialSlide: 0,
   speed: 400
 };

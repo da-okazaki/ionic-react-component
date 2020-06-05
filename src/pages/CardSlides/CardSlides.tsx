@@ -26,14 +26,16 @@ import Madison from             '../../asset/card/madison.jpg'
 
 
 const slideOpts = {
-  initialSlide: 3, // 初期スライド
-  speed: 600,
+  initialSlide: 0, // 初期スライド
+  speed: 300,
   pager: false,
-  width: 75,
+  width: 75
 };
 
-const CardSlides: React.FC<RouteComponentProps> = () => {
+//Tranisition effect. Could be "slide", "fade", "cube", "coverflow" or "flip"
 
+
+const CardSlides: React.FC<RouteComponentProps> = () => {
 
   return (
     <IonPage>
@@ -68,6 +70,7 @@ const CardSlides: React.FC<RouteComponentProps> = () => {
          5. 3スライド目が選択されたらデバイスをバイブレーションさせる
 
          */}
+         
         <IonSlides options={slideOpts}>
           <IonSlide>
           </IonSlide>
@@ -109,32 +112,6 @@ const CardSlides: React.FC<RouteComponentProps> = () => {
             </IonFab>
           </IonSlide>
         </IonSlides>
-        {/**
-        <IonSlides options={slideOpts}>
-          <IonSlide>
-            <IonCard>
-              <IonLabel>
-                <IonImg src={Madison} />
-              </IonLabel>
-            </IonCard>
-          </IonSlide>
-          <IonSlide>
-            <IonCard>
-              <IonLabel>
-                <IonImg src={Album} />
-              </IonLabel>
-            </IonCard>
-          </IonSlide>
-          <IonSlide>
-            <IonCard>
-              <IonLabel>
-                <IonImg src={CardTopImg} />
-              </IonLabel>
-            </IonCard>
-          </IonSlide>
-        </IonSlides>
-         */}
-
       </IonContent>
     </IonPage>
   )
