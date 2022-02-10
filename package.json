@@ -29,7 +29,7 @@
     "cordova-plugin-stripe": "^1.5.3",
     "cordova-plugin-youtube-video-player": "^2.4.0",
     "ionicons": "^5.0.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-measure": "^2.3.0",
